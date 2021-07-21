@@ -13,15 +13,19 @@
 (function () {
   $("#switchUnits").append('<li id="btnShowTw" class>台版列表</li>');
   let list_id = [".rarity5 li", ".rarity4 li", ".rarity3 li", ".rarity2 li"];
-  let json_url = "https://raw.githubusercontent.com/wudaniel/worldflipper-tw-list/main/tw.json";
+  let json_url =
+    "https://raw.githubusercontent.com/wudaniel/worldflipper-tw-list/main/tw.json";
   fetch(json_url)
-    .then(data => data.json())
+    .then((data) => data.json())
     .then(function (TW) {
       $("#btnShowTw").click(function () {
         if ($("#btnShowTw").hasClass("on")) {
           for (let index in list_id) {
             $(list_id[index]).each(function (i, n) {
-              if (!TW.includes($(n).attr("id")) && !$(n).hasClass("spookyStuff")) {
+              if (
+                !TW.includes($(n).attr("id")) &&
+                !$(n).hasClass("spookyStuff")
+              ) {
                 $(n).show();
               }
             });
@@ -30,7 +34,10 @@
         } else {
           for (let index in list_id) {
             $(list_id[index]).each(function (i, n) {
-              if (!TW.includes($(n).attr("id")) && !$(n).hasClass("spookyStuff")) {
+              if (
+                !TW.includes($(n).attr("id")) &&
+                !$(n).hasClass("spookyStuff")
+              ) {
                 $(n).hide();
               }
             });
@@ -38,5 +45,5 @@
           $("#btnShowTw").addClass("on");
         }
       });
-    })
+    });
 })();
