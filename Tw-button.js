@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         彈射世界背包網只顯示台服角色
 // @namespace    http://tampermonkey.net/
-// @version      0.7.1
+// @version      0.8
 // @description  讓背包網只顯示台服現有角色
 // @author       Paver
 // @include      https://eliya-bot.herokuapp.com/*
