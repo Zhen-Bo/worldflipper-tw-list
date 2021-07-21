@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         彈射世界背包網只顯示台服角色
 // @namespace    http://tampermonkey.net/
-// @version      0.7
+// @version      0.7.1
 // @description  讓背包網只顯示台服現有角色
 // @author       Paver
 // @include      https://eliya-bot.herokuapp.com/*
@@ -14,7 +14,7 @@
   $("#switchUnits").append('<li id="btnShowTw" class>台版列表</li>');
   let list_id = [".rarity5 li", ".rarity4 li", ".rarity3 li", ".rarity2 li"];
   let json_url =
-    "https://raw.githubusercontent.com/wudaniel/worldflipper-tw-list/main/tw.json";
+    "https://raw.githubusercontent.com/Zhen-Bo/worldflipper-tw-list/main/tw.json";
   fetch(json_url)
     .then((data) => data.json())
     .then(function (TW) {
