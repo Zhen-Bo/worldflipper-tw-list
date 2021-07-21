@@ -13,7 +13,8 @@
 (function () {
   $("#switchUnits").append('<li id="btnShowTw" class>台版列表</li>');
   let list_id = [".rarity5 li", ".rarity4 li", ".rarity3 li", ".rarity2 li"];
-  let TW = fetch("https://raw.githubusercontent.com/wudaniel/worldflipper-tw-list/main/tw.json")
+  let json_url = "https://raw.githubusercontent.com/wudaniel/worldflipper-tw-list/main/tw.json";
+  fetch(json_url)
     .then(data => data.json())
     .then(function (TW) {
       $("#btnShowTw").click(function () {
