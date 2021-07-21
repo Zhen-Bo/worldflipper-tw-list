@@ -14,7 +14,7 @@
   $("#switchUnits").append('<li id="btnShowTw" class>台版列表</li>');
   let list_id = [".rarity5 li", ".rarity4 li", ".rarity3 li", ".rarity2 li"];
   let TW;
-  fetch("https://raw.githubusercontent.com/wudaniel/worldflipper-tw-list/main/tw.json").then(data => TW = data).catch(error => console.error(error))
+  fetch("https://raw.githubusercontent.com/wudaniel/worldflipper-tw-list/main/tw.json").then(data => TW = data.json()).catch(error => console.error(error))
   console.log(TW)
   $("#btnShowTw").click(function () {
     if ($("#btnShowTw").hasClass("on")) {
