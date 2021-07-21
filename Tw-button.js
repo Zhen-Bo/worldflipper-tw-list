@@ -13,27 +13,29 @@
 (function () {
   $("#switchUnits").append('<li id="btnShowTw" class>台版列表</li>');
   let list_id = [".rarity5 li", ".rarity4 li", ".rarity3 li", ".rarity2 li"];
-  let TW = fetch("https://raw.githubusercontent.com/wudaniel/worldflipper-tw-list/main/tw.json").then(data => data.json())
-  console.log(TW)
-  $("#btnShowTw").click(function () {
-    if ($("#btnShowTw").hasClass("on")) {
-      for (let index in list_id) {
-        $(list_id[index]).each(function (i, n) {
-          if (!TW.includes($(n).attr("id")) && !$(n).hasClass("spookyStuff")) {
-            $(n).show();
+  let TW = fetch("https://raw.githubusercontent.com/wudaniel/worldflipper-tw-list/main/tw.json")
+    .then(data => data.json())
+    .then(function (TW) {
+      $("#btnShowTw").click(function () {
+        if ($("#btnShowTw").hasClass("on")) {
+          for (let index in list_id) {
+            $(list_id[index]).each(function (i, n) {
+              if (!TW.includes($(n).attr("id")) && !$(n).hasClass("spookyStuff")) {
+                $(n).show();
+              }
+            });
           }
-        });
-      }
-      $("#btnShowTw").removeClass("on");
-    } else {
-      for (let index in list_id) {
-        $(list_id[index]).each(function (i, n) {
-          if (!TW.includes($(n).attr("id")) && !$(n).hasClass("spookyStuff")) {
-            $(n).hide();
+          $("#btnShowTw").removeClass("on");
+        } else {
+          for (let index in list_id) {
+            $(list_id[index]).each(function (i, n) {
+              if (!TW.includes($(n).attr("id")) && !$(n).hasClass("spookyStuff")) {
+                $(n).hide();
+              }
+            });
           }
-        });
-      }
-      $("#btnShowTw").addClass("on");
-    }
-  });
+          $("#btnShowTw").addClass("on");
+        }
+      });
+    })
 })();
