@@ -3,17 +3,18 @@
 彈射世界背包網只顯示台服角色
 於 eliya-bot.herokuapp.com 新增一個台服目前推出的角色及武器的篩選按鈕
 按鈕位置於上方切換武器角色按鈕旁邊
-[![按鈕位置](按鈕位置 "按鈕位置")](https://upload.cc/i1/2021/06/15/ZBPtER.png "按鈕位置")
-[![使用示意圖](使用示意圖 "使用示意圖")](https://upload.cc/i1/2021/06/15/oKGsSQ.png "使用示意圖")
+#### 按鈕位置
+![按鈕位置](https://upload.cc/i1/2021/06/15/ZBPtER.png)
+#### 使用示意圖
+![使用示意圖](https://upload.cc/i1/2021/06/15/oKGsSQ.png)
 
 ---
 
 #使用方法
 1.到你瀏覽器的擴充商店找"tampermonkey"安裝
-2.進入此網站:[點我][點我]
+2.進入此網站:[點我](https://greasyfork.org/zh-TW/scripts/429676-%E5%BD%88%E5%B0%84%E4%B8%96%E7%95%8C%E8%83%8C%E5%8C%85%E7%B6%B2%E5%8F%AA%E9%A1%AF%E7%A4%BA%E5%8F%B0%E6%9C%8D%E8%A7%92%E8%89%B2)
 3.點擊安裝腳本
 4.完成
-[點我]: https://greasyfork.org/zh-TW/scripts/429676-%E5%BD%88%E5%B0%84%E4%B8%96%E7%95%8C%E8%83%8C%E5%8C%85%E7%B6%B2%E5%8F%AA%E9%A1%AF%E7%A4%BA%E5%8F%B0%E6%9C%8D%E8%A7%92%E8%89%B2
 
 
 ------------
