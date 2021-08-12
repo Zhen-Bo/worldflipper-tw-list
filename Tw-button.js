@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         彈射世界背包網只顯示台服角色
 // @namespace    http://tampermonkey.net/
-// @version      0.9
+// @version      0.9.1
 // @description  讓背包網只顯示台服現有角色
 // @author       Paver
 // @include      https://eliya-bot.herokuapp.com/*
@@ -18,12 +18,14 @@
   fetch(json_url)
     .then((data) => data.json())
     .then(function (TW) {
-      for (let index in list_id) {
-        $(list_id[index]).each(function (i, n) {
-          if (TW.includes($(n).attr("id")) && !$(n).hasClass("spookyStuff")) {
-            $(n).addClass("InTaiwan");
-          }
-        });
-      }
+      $("#listServer").click(function () {
+        for (let index in list_id) {
+          $(list_id[index]).each(function (i, n) {
+            if (TW.includes($(n).attr("id")) && !$(n).hasClass("spookyStuff")) {
+              $(n).addClass("InTaiwan");
+            }
+          });
+        }
+      });
     });
 })();
